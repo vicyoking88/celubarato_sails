@@ -23,6 +23,10 @@ module.exports.routes = {
 
   '/': { view: 'pages/home_celubarato' },
 
+  'GET /productos': { action: 'view-productos' },
+
+  '/crear':{action:'crear'},
+
 
   /***************************************************************************
   *                                                                          *

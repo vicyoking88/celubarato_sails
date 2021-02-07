@@ -44,20 +44,12 @@
 
 <body>
 
- 
+  <%- partial('../partials/header.ejs') %>
 
   <%- body %>
 
+  <%- partial('../partials/footer.ejs') %>
 
-<!--semantica que contiene el pie de pagina-->
-<footer class="container-fluid my-5 py-1 bg-dark text-white">
-  <div class="row">
-    <div class="d-none d-sm-block ">Compra tu celular</div>
-    <div class="col text-center text-sm-right">
-      <p>&#169; Derechos reservados</p> 
-    </div>
-  </div>
-</footer>
     <!--
         Client-side Templates
         ========================
@@ -134,6 +126,7 @@
       crossorigin="anonymous"></script>
     <!--SCRIPTS-->
     <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/pages/productos.page.js"></script>
     <!--SCRIPTS END-->
 </body>
 

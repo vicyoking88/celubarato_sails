@@ -15,11 +15,11 @@ module.exports = {
 
     descripcion: { type: 'string' },
 
-    precio: { type: 'number' },
+    marca: { type: 'string' },
 
-    modelo: { type: 'number' },
+    modelo: { type: 'string' },
 
-    marca: { type: 'string' }
+    precio: { type: 'number' }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
