@@ -13,7 +13,10 @@ module.exports = {
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      nombre: {type: 'string'},
+      nombre: {
+        type: 'string',
+        required: true //agregamos esta validacion
+      },
 
       email: {type: 'string'}
   

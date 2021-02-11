@@ -23,10 +23,7 @@ module.exports = {
   fn: async function (inputs, exits) {
 
       const nuevo = await Articulo.create({
-        descripcion :"poco uso",
-        marca: "naranja",
-        modelo: "N1",
-        precio: 25
+        
       })
     // All done.
     return exits.success("/");
