@@ -21,11 +21,13 @@ module.exports.routes = {
 
  // '/': { view: 'pages/homepage' },
 
-  '/': { view: 'pages/home_celubarato' },
+  '/productos': { view: 'pages/productos' },
 
-  'GET /productos': { action: 'view-productos' },
+  'GET /': { action: 'view-productos' },
 
   '/crear':{action:'crear'},
+
+  '/editar':{action: 'editar'},
 
 
   /***************************************************************************
