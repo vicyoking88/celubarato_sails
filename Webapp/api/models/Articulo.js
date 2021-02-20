@@ -35,6 +35,14 @@ module.exports = {
       columnName: 'usuario_id'
     },
 
+    //para que traiga varios comentarios
+    //
+    comentarios:{
+      collection: 'comentario',
+      //es el que especifica la relacion
+      via: 'articulo'
+    }
+
   },
 
 };

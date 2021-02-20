@@ -22,9 +22,16 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-      const nuevo = await Articulo.create({
-        
+
+    
+/*
+      const nuevo = await Usuario.create({
+       nombre: "jaun",
+       email: "juan@gmail.com"
+       
       })
+
+*/
     // All done.
     return exits.success("/");
 
