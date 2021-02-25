@@ -23,7 +23,7 @@ module.exports = {
     fn: async function (inputs, exits) {
         //asi editamos
 
-        let articulo = await Articulo.update({id:3}, {description:"Perfecto estado"})
+        let articulo = await Articulo.update({id:3}, {descripcion:"Perfecto estado"})
   
        
   

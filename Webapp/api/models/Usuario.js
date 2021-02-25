@@ -15,10 +15,17 @@ module.exports = {
   
       nombre: {
         type: 'string',
-        required: true //agregamos esta validacion
+        //agregamos esta validacion
+        required: true,// que sea requerido
+        minLength: 2 // min dos caracteres
+        //campo nombre obligatorio
       },
 
-      email: {type: 'string'}
+      email: {
+        type: 'string',
+        required: true,
+        isEmail:true//validacion formato correo
+      }
   
       //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
       //  ║╣ ║║║╠╩╗║╣  ║║╚═╗

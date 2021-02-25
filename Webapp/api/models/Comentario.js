@@ -26,7 +26,9 @@ module.exports = {
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
       articulo:{
+          //modelo que se relaciona
           model: 'articulo',
+          //columna que lo enlaza
           columnName: 'articulo_id'
       }
   

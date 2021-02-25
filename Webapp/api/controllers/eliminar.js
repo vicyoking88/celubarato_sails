@@ -4,7 +4,7 @@ module.exports = {
     friendlyName: 'Eliminar',
   
   
-    description: 'Edit something.',
+    description: 'Delete something.',
   
   
     inputs: {
@@ -21,12 +21,8 @@ module.exports = {
   
   
     fn: async function (inputs, exits) {
-        //asi editamos
-
-        let articulo = await Articulo.update({id:3}, {descripcion:"Perfecto estado"})
-  
-       
-  
+        //asi eliminamos
+        let articulo = await Articulo.destroy({id: 4})
       // All done.
       return exits.success("/");
   

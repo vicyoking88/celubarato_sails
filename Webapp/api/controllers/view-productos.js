@@ -9,12 +9,16 @@ module.exports = {
   exits: {
 
     success: {
-      viewTemplatePath: 'pages/productos'
+      viewTemplatePath: 'pages/home_celubarato'
     }
 
   },
 
   fn: async function (inputs, exits) {
+
+    //asi solicitamos todos los articulos con su usuario y comentarios
+    const productos = await Articulo.find().populate('usuario').populate('comentarios')
+
 
     //CONSULTAS INDEPENDIENTES DE LA BASE  DE DATOS
 
@@ -32,6 +36,8 @@ module.exports = {
       }
     })
     */
+
+   /*
     //CONSULTA MUCHO MAS AVANZADA
 
     const productos = await Articulo.find({
@@ -46,6 +52,7 @@ module.exports = {
      //ordenar
       sort:'precio ASC'
     })
+*/
 
     // Respond with view.
     return exits.success({productos});

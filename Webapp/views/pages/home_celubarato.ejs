@@ -1,3 +1,32 @@
-<div class="container mt-4">
-    <h1>ESTO ES CELUBARATO</h1>
-</div>
+<table class="table table-secondary table-hover mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Comentarios</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% productos.forEach( articulo =>{ %>
+        <tr>
+        <th scope="row"><%=articulo.id%></th>
+        <td><%=articulo.marca%></td>
+        <td><%=articulo.modelo%></td>
+        <td><%=articulo.descripcion%></td>
+        <td><%=articulo.precio%></td>
+        <td><%=articulo.usuario.nombre%></td>
+        <td>
+          <ul>
+            <% articulo.comentarios.forEach( comentario =>{ %>
+              <li><%=comentario.descripcion%></li>
+            <%})%>
+          </ul>
+        </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>

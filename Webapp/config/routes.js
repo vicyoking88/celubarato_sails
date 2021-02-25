@@ -29,6 +29,8 @@ module.exports.routes = {
 
   '/editar':{action: 'editar'},
 
+  '/eliminar':{ action : 'eliminar'},
+
 
   /***************************************************************************
   *                                                                          *
