@@ -24,7 +24,7 @@ module.exports.routes = {
   '/productos': { view: 'pages/productos' },
 
   /**con locals le decimos con cual layouts iniciar y tambien le enviamos variables */
-  '/': { action: 'view-productos', locals: { layout:'layouts/iniciado', titulo:'Inicio 2'} },
+  '/': { action: 'view-productos', locals: { layout:'layouts/iniciado', titulo:'Inicio 2', titulo_tabla: 'Articulos'} },
 
   /**podemos crear otras rutas que usen el mismo sitema MVC reutilizanco la misma pagina pero con otras variables*/
   '/hola': { action: 'view-productos', locals: { layout:'layouts/iniciado', titulo:'HOLA '} },
