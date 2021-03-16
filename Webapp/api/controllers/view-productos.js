@@ -5,6 +5,15 @@ module.exports = {
 
   description: 'Display "Productos" page.',
 
+  inputs:{
+
+    precio:{
+      type:'number',
+      required: false
+    }
+
+  },
+
 
   exits: {
 
@@ -16,8 +25,19 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    //imprimo en consola el valor del inputs precio si no tiene nada imprime indefinido
+    //console.log('inputs:', inputs.precio)
+
+    let productos
+    if (inputs.precio){
+      productos = await Articulo.find({precio: { ">" : inputs.precio}}).populate('usuario').populate('comentarios')
+    }else{
+      productos = await Articulo.find().populate('usuario').populate('comentarios')
+    }
+    return exits.success({productos});
+
     //asi solicitamos todos los articulos con su usuario y comentarios
-    const productos = await Articulo.find().populate('usuario').populate('comentarios')
+   /* const productos = await Articulo.find().populate('usuario').populate('comentarios')*/
 
 
     //CONSULTAS INDEPENDIENTES DE LA BASE  DE DATOS
@@ -55,7 +75,7 @@ module.exports = {
 */
 
     // Respond with view.
-    return exits.success({productos});
+    //return exits.success({productos});
 
   }
 
