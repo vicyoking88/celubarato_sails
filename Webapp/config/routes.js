@@ -35,6 +35,8 @@ module.exports.routes = {
 
   '/eliminar':{ action : 'eliminar'},
 
+  '/action1': {action:'action1'},
+
 
   /***************************************************************************
   *                                                                          *
