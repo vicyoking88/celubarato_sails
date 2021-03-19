@@ -27,7 +27,7 @@ module.exports = {
 
     //imprimo en consola el valor del inputs precio si no tiene nada imprime indefinido
     //console.log('inputs:', inputs.precio)
-
+/*
     let productos
     if (inputs.precio){
       productos = await Articulo.find({precio: { ">" : inputs.precio}}).populate('usuario').populate('comentarios')
@@ -36,8 +36,15 @@ module.exports = {
     }
     return exits.success({productos});
 
+    */
+
+    /*****USANDO EL HELPERS */
+    let nombreCompleto = await sails.helpers.nombreCompleto("juan", "gil")
+
+    console.log('nombreCompleto : ', nombreCompleto);
+
     //asi solicitamos todos los articulos con su usuario y comentarios
-   /* const productos = await Articulo.find().populate('usuario').populate('comentarios')*/
+    const productos = await Articulo.find().populate('usuario').populate('comentarios')
 
 
     //CONSULTAS INDEPENDIENTES DE LA BASE  DE DATOS
@@ -75,7 +82,7 @@ module.exports = {
 */
 
     // Respond with view.
-    //return exits.success({productos});
+    return exits.success({productos});
 
   }
 
