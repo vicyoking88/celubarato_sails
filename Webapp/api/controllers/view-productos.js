@@ -25,6 +25,9 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    /***USO DE LOG */
+    sails.log.info("INFO")
+
     //imprimo en consola el valor del inputs precio si no tiene nada imprime indefinido
     //console.log('inputs:', inputs.precio)
 /*
@@ -45,6 +48,13 @@ module.exports = {
 
     //asi solicitamos todos los articulos con su usuario y comentarios
     const productos = await Articulo.find().populate('usuario').populate('comentarios')
+
+
+    /****USO DE LOGS */
+    sails.log.warn("WARN")
+    sails.log.error("ERROR")
+    sails.log.debug(productos)
+
 
 
     //CONSULTAS INDEPENDIENTES DE LA BASE  DE DATOS
