@@ -26,7 +26,7 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     /***USO DE LOG */
-    sails.log.info("INFO")
+    // sails.log.info("INFO")
 
     //imprimo en consola el valor del inputs precio si no tiene nada imprime indefinido
     //console.log('inputs:', inputs.precio)
@@ -51,9 +51,9 @@ module.exports = {
 
 
     /****USO DE LOGS */
-    sails.log.warn("WARN")
-    sails.log.error("ERROR")
-    sails.log.debug(productos)
+    // sails.log.warn("WARN")
+    // sails.log.error("ERROR")
+    // sails.log.debug(productos)
 
 
 
