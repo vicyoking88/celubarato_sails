@@ -35,6 +35,7 @@ module.exports.http = {
       'bodyParser',
       'compress',
       'poweredBy',
+      'bitacora',
       'router',
       'www',
       'favicon',
@@ -54,6 +55,17 @@ module.exports.http = {
     //   var middlewareFn = skipper({ strict: true });
     //   return middlewareFn;
     // })(),
+
+    bitacora : (function bitacora(){
+      //con next pasa al proximo en la cadena 
+      //en este caso router
+      return function (req, res, next){
+        //imprime todo lo que ejecuta la aplicacion
+        //intercepta todas las llamadas
+          sails.log.debug(req.url)
+        return next ();
+      }
+    })()
 
   },
 

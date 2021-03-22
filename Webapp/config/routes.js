@@ -35,6 +35,11 @@ module.exports.routes = {
 
   '/eliminar':{ action : 'eliminar'},
 
+  
+
+  '/accionUno' : 'EjemploController.accionUno',
+  '/accionDos' : 'EjemploController.accionDos',
+
   '/action1': {action:'action1'},
 
 
